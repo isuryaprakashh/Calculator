@@ -1,0 +1,76 @@
+/* Light Theme */
+:root {
+    --background-color: #f1f1f1;
+    --button-color: #fff;
+    --button-shadow: #aaa;
+    --button-text-color: #333;
+    --display-color: #333;
+}
+
+/* Dark Theme */
+.dark-mode {
+    --background-color: #333;
+    --button-color: #555;
+    --button-shadow: #000;
+    --button-text-color: #fff;
+    --display-color: #fff;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: var(--background-color);
+    transition: background-color 0.3s ease;
+}
+
+.calculator {
+    width: 300px;
+    background-color: var(--background-color);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+.display {
+    height: 80px;
+    background-color: var(--display-color);
+    color: var(--background-color);
+    text-align: right;
+    padding: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    overflow: hidden;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1px;
+}
+
+button {
+    background-color: var(--button-color);
+    color: var(--button-text-color);
+    border: none;
+    padding: 20px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 50%;
+}
+
+button:active {
+    background-color: var(--button-shadow);
+}
+
+.operator {
+    background-color: #f2a63d;
+    color: #fff;
+}
+
+.operator:active {
+    background-color: #d18b34;
+}
